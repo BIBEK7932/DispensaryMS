@@ -7,7 +7,7 @@ function AdminDoctorsPage() {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await axios.get("https://dispensaryms-1-1.onrender.com/admin/doctors");
+        const response = await axios.get("https://dispensaryms.onrender.com/admin/doctors");
         setDoctors(response.data);
       } catch (error) {
         console.error("Error fetching doctors:", error);
@@ -23,7 +23,7 @@ function AdminDoctorsPage() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://dispensaryms-1-1.onrender.com/admin/doctors/${id}`);
+      await axios.delete(`https://dispensaryms.onrender.com/admin/doctors/${id}`);
       setDoctors((prevDoctors) => prevDoctors.filter((doctor) => doctor._id !== id));
       console.log("Doctor deleted successfully");
     } catch (error) {

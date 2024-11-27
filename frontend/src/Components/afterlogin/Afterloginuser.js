@@ -36,7 +36,7 @@ const Afterloginuser = () => {
                     "Content-Type":"application/json"
                 }
             }
-            const res = await axios.post("https://dispensaryms-1-1.onrender.com/doctor/book-data",post,config);
+            const res = await axios.post("https://dispensaryms.onrender.com/doctor/book-data",post,config);
             if (res.status === 200) {
               toast.success(res.data.message);
             } else {

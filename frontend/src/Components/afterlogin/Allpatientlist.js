@@ -9,7 +9,7 @@ const Allpatient = () => {
 
     const fetchData = async () => {
         try {
-            const res = await axios.get("https://dispensaryms-1-1.onrender.com/admin/get-all-patient");
+            const res = await axios.get("https://dispensaryms.onrender.com/admin/get-all-patient");
             setData(res.data.data);
         } catch (error) {
             console.log("Error fetching data: " + error);

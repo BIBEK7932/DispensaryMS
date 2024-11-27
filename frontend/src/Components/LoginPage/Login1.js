@@ -38,9 +38,45 @@ function Login() {
     setPost1({ ...post1, accountType1: event.target.value });
   };
 
+  // const submitHandle = async (event) => {
+  //   event.preventDefault();
+  
+  //   const { data1 } = event.response;
+  //   console.log(data1)
+  //   try {
+  //     const config = {
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //     };
+  //     console.log(post);
+  //     console.log(post.accountType);
+  //     const { data } = await axios.post(
+  //       `https://dispensaryms.onrender.com/${post.accountType}/signup`,
+  //       post,
+  //       config
+  //     );
+  //     // alert("hello")
+  //     console.log(data);
+     
+  //     toast.success("Signup complete", {
+  //       position: "top-center",
+  //     });
+  //     setTimeout(() => {
+  //       window.location.reload();
+  //       navigate("/")
+  //     }, 500);
+  //   } catch (error) {
+  //     toast.error(data1.message, {
+  //       position: "top-center",
+  //     });
+  //     console.log("Error from signup page" + error);
+  //   }
+  // };
+
+  
   const submitHandle = async (event) => {
-    event.preventDefault();
-    const { data1 } = event.response;
+    event.preventDefault(); // Prevents the default form submission behavior.
     try {
       const config = {
         headers: {
@@ -49,29 +85,41 @@ function Login() {
       };
       console.log(post);
       console.log(post.accountType);
+  
+      // Making the API request
       const { data } = await axios.post(
-        `https://dispensaryms-1-1.onrender.com/${post.accountType}/signup`,
+        `https://dispensaryms.onrender.com/${post.accountType}/signup`,
         post,
         config
       );
-      // alert("hello")
+  
       console.log(data);
-     
+  
       toast.success("Signup complete", {
         position: "top-center",
       });
+  
       setTimeout(() => {
         window.location.reload();
-        navigate("/")
+        navigate("/");
       }, 500);
     } catch (error) {
-      toast.error(data1.message, {
-        position: "top-center",
-      });
-      console.log("Error from signup page" + error);
+      // Check if there's an error response
+      if (error.response && error.response.data) {
+        toast.error(error.response.data.message, {
+          position: "top-center",
+        });
+        console.log("Error from signup page:", error.response.data.message);
+      } else {
+        toast.error("An unexpected error occurred.", {
+          position: "top-center",
+        });
+        console.log("Unexpected error:", error);
+      }
     }
   };
-
+  
+  
   const submitForm = async (event) => {
     try {
       event.preventDefault();
@@ -83,7 +131,7 @@ function Login() {
       console.log(post1);
       console.log(post1.accountType1);
       const response = await axios.post(
-        `https://dispensaryms-1-1.onrender.com/${post1.accountType1}/login`,
+        `https://dispensaryms.onrender.com/${post1.accountType1}/login`,
         post1,
         config
       );

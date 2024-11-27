@@ -15,7 +15,7 @@ const Alluserdetails = () => {
   const fetchData = async () => {
     try {
       const res = await axios.get(
-        `https://dispensaryms-1-1.onrender.com/user/get-data-user/?id=${id}`
+        `https://dispensaryms.onrender.com/user/get-data-user/?id=${id}`
       );
       console.log(res.data.data);
       setData(res.data.data);
@@ -42,7 +42,7 @@ const Alluserdetails = () => {
         },
       };
       const res = await axios.post(
-        `https://dispensaryms-1-1.onrender.com/user/save-medicine/?id=${id}`,
+        `https://dispensaryms.onrender.com/user/save-medicine/?id=${id}`,
         post,
         config
       );
