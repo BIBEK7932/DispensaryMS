@@ -21,7 +21,7 @@ const  myMetting = async (element) =>{
         container: element,
         sharedLinks: [{
             name: 'Personal link',
-            url: `https://dispensaryms-1-1.onrender.com/Videoc/Room/${RoomId}`
+            url: `https://dispensaryms.onrender.com/Videoc/Room/${RoomId}`
              
           },
         ],
