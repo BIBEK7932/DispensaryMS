@@ -1,0 +1,51 @@
+
+#appoinmentList {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    position: absolute;
+    width: 100%;
+  }
+  
+ 
+  #appoinmentListT {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 6fr;
+  }
+  
+
+  .appoinmentListTH th {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+ .appoinmentListTH tr {
+    transition: background-color 0.3s ease;
+  }
+  
+
+  .appoinmentListTH tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+
+  .appoinmentListTH td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+
+  .appoinmentListTH tr:hover {
+    background-color: #bbd8f4;
+  }
+  
+ 

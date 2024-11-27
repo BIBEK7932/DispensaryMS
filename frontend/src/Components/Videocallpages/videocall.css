@@ -1,0 +1,64 @@
+/* General styles */
+
+
+/* Navbar styles */
+
+
+/* Video Call container styles */
+.vid_call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  /* background-color:#8dd5f4; */
+  background: linear-gradient(
+    to right,
+    rgba(38, 209, 232, 0.5),
+    rgba(52, 209, 73, 0.5)
+  );
+  height: 820px;
+}
+
+.vid_container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.vid_heading1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.vid_input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.vid_button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vid_button:hover {
+  background-color: #0056b3;
+}
+
+.vid_button:hover {
+  background-color: #18e52d;
+}
+.mainVideocall1{
+  height: fit-content;
+}
